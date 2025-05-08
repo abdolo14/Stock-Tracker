@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker - Your Personal Stock Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-gray-900 to-indigo-900 text-white min-h-screen">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+            <img src="/static/images/logo.svg" alt="StockTracker Logo" class="w-10 h-10">
+            <div class="text-2xl font-bold text-purple-200">StockTracker</div>
+        </div>
+        <div class="space-x-4">
+            <a href="/auth/login" class="text-purple-200 hover:text-white transition-colors duration-300">Login</a>
+            <a href="/auth/register" class="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded-lg transition-colors duration-300">Sign Up</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h1 class="text-5xl font-bold mb-6 text-purple-200">Track Your Stocks with Confidence</h1>
+                <p class="text-xl text-purple-200/80 mb-8">Get real-time stock data, track your portfolio, and make informed investment decisions with our powerful stock tracking platform.</p>
+                <div class="space-x-4">
+                    <a href="/auth/register" class="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg inline-block transition-colors duration-300">Get Started</a>
+                    <a href="/auth/login" class="border border-indigo-600 hover:border-indigo-500 px-6 py-3 rounded-lg inline-block transition-colors duration-300 text-purple-200 hover:text-white">Login</a>
+                </div>
+            </div>
+            <div class="hidden md:block transform hover:scale-[1.02] transition-all duration-300">
+                <img src="/static/images/stock-chart.svg" alt="Stock Chart" class="w-full">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <div class="bg-indigo-800 bg-opacity-40 backdrop-blur-sm rounded-xl p-8 border border-indigo-700/30 shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+                <h3 class="text-xl font-bold mb-4 text-purple-200">Real-Time Data</h3>
+                <p class="text-purple-200/80">Get instant access to real-time stock prices and market data from major exchanges.</p>
+            </div>
+            <div class="bg-indigo-800 bg-opacity-40 backdrop-blur-sm rounded-xl p-8 border border-indigo-700/30 shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+                <h3 class="text-xl font-bold mb-4 text-purple-200">Portfolio Tracking</h3>
+                <p class="text-purple-200/80">Track your investments, monitor performance, and analyze your portfolio's growth.</p>
+            </div>
+            <div class="bg-indigo-800 bg-opacity-40 backdrop-blur-sm rounded-xl p-8 border border-indigo-700/30 shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+                <h3 class="text-xl font-bold mb-4 text-purple-200">Interactive Charts</h3>
+                <p class="text-purple-200/80">Visualize stock performance with interactive charts and technical indicators.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mx-auto px-6 py-8 mt-12 border-t border-gray-800">
+        <div class="text-center text-gray-500">
+            © 2025 StockTracker. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

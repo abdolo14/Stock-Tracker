@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Tracker - Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <script src="/static/js/auth.js" defer></script>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-gray-900 to-indigo-900 text-white min-h-screen">
+    <nav class="container mx-auto px-6 py-4">
+        <a href="/" class="flex items-center space-x-3 text-white hover:text-purple-200 transition-colors duration-300">
+            <img src="/static/images/logo.svg" alt="StockTracker Logo" class="w-10 h-10">
+            <span class="text-2xl font-bold">StockTracker</span>
+        </a>
+    </nav>
+
+    <div class="min-h-[80vh] flex items-center justify-center px-4">
+        <div class="max-w-md w-full space-y-8 p-8 bg-indigo-800 bg-opacity-40 backdrop-blur-sm rounded-xl border border-indigo-700/30 shadow-xl transform hover:scale-[1.02] transition-all duration-300">
+            <div>
+                <h2 class="text-3xl font-bold text-center mb-8 text-white">Create Your Account</h2>
+            </div>
+
+            <form id="registerForm" class="space-y-6">
+                <div>
+                    <label for="registerUsername" class="block text-sm font-medium text-white">Username</label>
+                    <input type="text" id="registerUsername" required minlength="3" placeholder="Choose a username"
+                           class="mt-1 block w-full px-4 py-3 bg-indigo-700/30 border border-indigo-600/30 rounded-lg shadow-sm text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
+                    <p class="text-xs text-purple-200/70 mt-1">Minimum 3 characters</p>
+                </div>
+                <div>
+                    <label for="registerEmail" class="block text-sm font-medium text-white">Email</label>
+                    <input type="email" id="registerEmail" required placeholder="Enter your email"
+                           class="mt-1 block w-full px-4 py-3 bg-indigo-700/30 border border-indigo-600/30 rounded-lg shadow-sm text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
+                </div>
+                <div>
+                    <label for="registerPassword" class="block text-sm font-medium text-white">Password</label>
+                    <input type="password" id="registerPassword" required minlength="8" placeholder="Choose a password"
+                           pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                           class="mt-1 block w-full px-4 py-3 bg-indigo-700/30 border border-indigo-600/30 rounded-lg shadow-sm text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
+                    <p class="text-xs text-purple-200/70 mt-1">Minimum 8 characters, at least one letter and one number</p>
+                </div>
+                <div>
+                    <label for="registerPasswordConfirm" class="block text-sm font-medium text-white">Confirm Password</label>
+                    <input type="password" id="registerPasswordConfirm" required placeholder="Confirm your password"
+                           class="mt-1 block w-full px-4 py-3 bg-indigo-700/30 border border-indigo-600/30 rounded-lg shadow-sm text-white placeholder-purple-300/50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-colors duration-300">
+                </div>
+                <div id="registerError" class="text-red-400 text-sm hidden"></div>
+                <button type="submit"
+                        class="w-full flex justify-center py-3 px-4 rounded-lg shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Create Account
+                </button>
+            </form>
+
+            <div class="text-center">
+                <p class="text-white">Already have an account? <a href="/auth/login" class="text-purple-200 hover:text-white transition-colors duration-300">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
