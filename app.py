@@ -240,7 +240,7 @@ def serve_register():
 @app.route('/dashboard', methods=['GET'])
 @login_required
 def serve_dashboard():
-    response = send_from_directory('.', 'dashboard.html')
+    response = send_from_directory('templates', 'dashboard.html')
     response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
     response.headers['Pragma'] = 'no-cache'
     response.headers['Expires'] = '0'
